@@ -1,0 +1,15 @@
+name: Generate ASCII Artwork with script
+
+on: push
+
+jobs:
+    build_job_1:
+        runs-on: ubuntu-latest
+        steps:
+          - name: Checkout repo
+            uses: actions/checkout@v6
+
+          - name: Execute ascii script
+            run: |
+                chmod +x ./ascii-script.sh
+                ./ascii-script.sh
